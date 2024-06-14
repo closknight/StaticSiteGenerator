@@ -23,6 +23,8 @@ def split_nodes_delimiter(old_nodes: list[TextNode], delimiter: str, text_type: 
                     split_nodes.append(TextNode(part, text_type_text if is_text else text_type))
                 is_text = not is_text
             if is_text:
+                print(old_nodes)
+                print(delimiter)
                 raise Exception("Delimeter is not closed")
             new_nodes.extend(split_nodes)
 

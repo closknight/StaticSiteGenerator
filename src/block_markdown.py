@@ -96,7 +96,7 @@ def code_block_to_html(block: str):
 
 def ul_block_to_html(block: str):
     def process_li(line: str):
-        line = line.lstrip("*- ")
+        line = line[2:]
         li_children = text_to_html(line)
         return ParentNode("li", li_children)
      
